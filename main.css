@@ -1,0 +1,52 @@
+body {
+  background-color: #c3c3c3;
+}
+
+h1, p {
+  text-align: center;
+  color: red;
+  font-family: Verdana;
+}
+/*float:right*/
+
+.gameboard {
+  border-collapse: collapse;
+  width: 30em;
+  height: 30em;
+  margin-left: 28em;
+}
+
+.scoretable {
+  position: absolute;
+  margin-left: 70em;
+  margin-top: -25em;
+  border: 5px solid black;
+}
+
+td {
+
+}
+
+#f3 {
+  border-width: 5px;
+  border-style: solid;
+  border-left: 5px;
+}
+
+#f4 {
+  border: 5px solid black;
+}
+
+#f1, #f7 {
+  border-style: solid;
+  border-top: 5px;
+  border-bottom: 5px;
+  border-width: 5px;
+}
+
+#f5, #f8 {
+  border-width: 5px;
+  border-style: solid;
+  border-right: 5px;
+  border-bottom: 5px;
+}
