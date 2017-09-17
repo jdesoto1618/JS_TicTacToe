@@ -3,56 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-      <script type="text/javascript" src="controller_model.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
   <body>
-    <h1>Tic Tac Toe!</h1>
-    <p id="player"></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 bg-primary">
+          <h1>Tic Tac Toe</h1>
+        </div>
+      </div> <!-- ends row for title -->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="table-responsive">
+            <table class="gameboard">
+              <tr>
+                <td id="f0"></td>
+                <td id="f1"></td>
+                <td id="f2"></td>
+              </tr>
+              <tr>
+                <td id="f3"></td>
+                <td id="f4"></td>
+                <td id="f5"></td>
+              </tr>
+              <tr>
+                <td id="f6"></td>
+                <td id="f7"></td>
+                <td id="f8"></td>
+              </tr>
+            </table>
+          </div> <!-- ends table div -->
+        </div> <!--ends col-xs-6 div for game board -->
+      </div> <!-- ends row div for game board -->
+    </div> <!-- ends container div -->
     <input type="button" name="" value="Restart Game">
-    <table class="gameboard">
-      <tr>
-        <td id="f0"></td>
-        <td id="f1"></td>
-        <td id="f2"></td>
-      </tr>
-      <tr>
-        <td id="f3"></td>
-        <td id="f4"></td>
-        <td id="f5"></td>
-      </tr>
-      <tr>
-        <td id="f6"></td>
-        <td id="f7"></td>
-        <td id="f8"></td>
-      </tr>
-    </table>
     <!-- Could also user thead with player, score as columns. Then set up in the tbody the td's as I have them. -->
-    <table class="scoretable">
-      <thead>
-        <th>Player</th>
-        <th>Score</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Player 1</td>
-          <td id="p1score"></td>
-        </tr>
-        <tr>
-          <td>Player 2</td>
-          <td id="p2score"></td>
-        </tr>
-      </tbody>
-      <!-- <tr>
-        <th>Player</th>
-        <th>Score</th>
-      </tr> -->
-    </table>
-    <!-- <input type="button" name="" value="Start"> -->
+    <p id="player"></p>
+    <!-- jQuery 3.2.1 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
   </body>
 </html>
-<!-- After importing bootstrap, place everything in containers. Then, use the columns to space things out on the page. Should be col-sm-# -->

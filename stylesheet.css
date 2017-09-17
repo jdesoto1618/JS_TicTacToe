@@ -4,33 +4,32 @@ body {
 
 h1, p {
   text-align: center;
-  color: red;
+  color: green;
   font-family: Verdana;
 }
-/*float:right*/
 
 .gameboard {
   border-collapse: collapse;
   width: 30em;
   height: 30em;
-  margin-left: 28em;
+  margin: 0 auto;
+  float: none;
 }
 
 .scoretable {
-  position: absolute;
-  margin-left: 70em;
-  margin-top: -25em;
-  border: 5px solid black;
+  /*border: 5px solid black;*/
 }
 
-td {
-
+th {
+  font-size: 2em;
+  padding: 0.35em;
 }
 
 #f3 {
   border-width: 5px;
   border-style: solid;
   border-left: 5px;
+  width: 145px;
 }
 
 #f4 {
@@ -49,4 +48,11 @@ td {
   border-style: solid;
   border-right: 5px;
   border-bottom: 5px;
+}
+
+.bg-primary {
+  border-radius: 5px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
