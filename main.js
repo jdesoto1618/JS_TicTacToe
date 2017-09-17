@@ -6,15 +6,11 @@ $(document).ready(function() {
       if(counter % 2 === 0) {
           $(this).text("X")
           board[index] = player1;
-      } else { //Computer player's turn
-          // $(this).text("O")
-          // board[index] = player2;
       }
-  } //end of board index if loop
+  } //end of board index if statement
     win(); //check who has won
     counter++
     AI();
-    // console.log(board)
   })
   $("input").click(function(){
     index = 0; //clear the index when the button is clicked. This is to start the game, or clear it to start it over.
@@ -26,6 +22,9 @@ $(document).ready(function() {
     $("input").hide()
   }) // end of td click
 }) //end of ready function
+// save player names
+var p1Name = prompt('Player 1, enter your name!');
+var p2Name = prompt('Player 2, enter your name!');
 
 var board = [0,0,0,
              0,0,0,
@@ -56,11 +55,9 @@ function win() { //Can be refactored later, but these are set up to determine wi
      (board[2] + board[5] + board[8]) === 3 ||
      (board[0] + board[4] + board[8]) === 3 ||
      (board[6] + board[4] + board[2]) === 3)) {
-     $("#player").text("Player 1 Wins!");
+     $("#player").text(p1Name + " wins!");
      $("input").show()
      $("td").toggle("click")
-     p1Score++
-     $("#p1score").text(p1Score)
   }
   else if ((board[0] + board[1] + board[2] === -3 ||
      (board[3] + board[4] + board[5]) === -3 ||
@@ -70,14 +67,13 @@ function win() { //Can be refactored later, but these are set up to determine wi
      (board[2] + board[5] + board[8]) === -3 ||
      (board[0] + board[4] + board[8]) === -3 ||
      (board[6] + board[4] + board[2]) === -3)) {
-    $("#player").text("Player 2 Wins!");
+    $("#player").text(p2Name + " wins!");
     $("input").show()
     $("td").toggle("click")
-    p2Score++
-    $("#p1score").text(p2Score)
   }
   else if (counter === 8) {
     $("#player").text("Cats Game!");
-    $("input").show();
+    $(".btn-info").show();
+    $("td").toggle("click")
   }
 } // end of win function
