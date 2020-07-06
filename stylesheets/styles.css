@@ -1,11 +1,34 @@
-body {
-  background-color: #c3c3c3;
+:root {
+  --c-white: #fff;
+  --c-black: #000;
+  --c-primary-blue: #B2C8EC;
+}
+
+html, body {
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+  background: var(--c-white);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h1, p {
   text-align: center;
-  color: green;
-  font-family: Verdana;
+  color: var(--c-black);
+  margin: 0;
+}
+
+h1 {
+  letter-spacing: 0.1rem;
+}
+
+.title-container {
+  width: 50%;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  background: var(--c-primary-blue);
+  border-radius: 0.5rem;
 }
 
 .gameboard {
