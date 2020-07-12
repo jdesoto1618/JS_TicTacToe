@@ -25,7 +25,7 @@ h1 {
 
 .title-container {
   width: 50%;
-  margin: 1rem auto;
+  margin: 1rem auto 3rem;
   padding: 1rem 0;
   background: var(--c-primary-blue);
   border-radius: 0.5rem;
@@ -33,29 +33,27 @@ h1 {
 
 .gameboard {
   border-collapse: collapse;
-  width: 30em;
-  height: 30em;
   margin: 0 auto;
-  float: none;
 }
 
 th {
-  font-size: 2em;
+  font-size: 2rem;
   padding: 0.35em;
+}
+
+td {
+  width: 12rem;
+  height: 12rem;
 }
 
 #f3 {
   border-width: 5px;
   border-style: solid;
   border-left: 5px;
-  width: 145px;
-  height: 145px;
 }
 
 #f4 {
   border: 5px solid black;
-  width: 145px;
-  height: 145px;
 }
 
 #f1, #f7 {
@@ -63,8 +61,6 @@ th {
   border-top: 5px;
   border-bottom: 5px;
   border-width: 5px;
-  width: 145px;
-  height: 145px;
 }
 
 #f5, #f8 {
@@ -72,8 +68,6 @@ th {
   border-style: solid;
   border-right: 5px;
   border-bottom: 5px;
-  width: 145px;
-  height: 145px;
 }
 
 .bg-primary {
