@@ -1,5 +1,4 @@
-$(document).ready(function() {
-  $("input").hide()
+document.addEventListener('DOMContentLoaded', ()=> {
   $("td").on("click", function() {
     index = $(this).attr("id").split("")[1]; //grab the number of the ID only. Since I named my ID's f#, I need to grab the second index to get the number.
     if(board[index] === 0) { //This works because it checks to see if an entry is 0 before proceeding. Index is defined above this with index = $(this).attr("id").split("")[1];.
@@ -19,7 +18,7 @@ $(document).ready(function() {
     $("td").text("")
     $("td").toggle("click")
     $("#player").text("")
-    $("input").hide()
+    toggleReplayButton('off');
   }) // end of td click
 }) //end of ready function
 // save player names
@@ -44,7 +43,20 @@ function AI () {
     board[index] = player2;
     $("#f"+index).text("O")
     counter++;
-} //end of AI function
+}
+
+const toggleReplayButton = (toggle) => {
+  if(toggle) {
+    replayButton = document.querySelector('.replay-button');
+    if (toggle === 'on') {
+      replayButton.classList.remove('not-shown');
+    } else {
+      replayButton.classList.add('not-shown');
+    }
+  } else {
+    return
+  } 
+}
 
 function win() { //Can be refactored later, but these are set up to determine winners
   if ((board[0] + board[1] + board[2] === 3 ||
@@ -56,7 +68,7 @@ function win() { //Can be refactored later, but these are set up to determine wi
      (board[0] + board[4] + board[8]) === 3 ||
      (board[6] + board[4] + board[2]) === 3)) {
      $("#player").text(p1Name + " wins!");
-     $("input").show()
+    toggleReplayButton('on');
      $("td").toggle("click")
   }
   else if ((board[0] + board[1] + board[2] === -3 ||
@@ -68,12 +80,12 @@ function win() { //Can be refactored later, but these are set up to determine wi
      (board[0] + board[4] + board[8]) === -3 ||
      (board[6] + board[4] + board[2]) === -3)) {
     $("#player").text(p2Name + " wins!");
-    $("input").show()
+    toggleReplayButton('on');
     $("td").toggle("click")
   }
   else if (counter === 8) {
     $("#player").text("Cats Game!");
-    $(".btn-info").show();
+    toggleReplayButton('on');
     $("td").toggle("click")
   }
-} // end of win function
+}
